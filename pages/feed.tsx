@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import getPosts, { Post } from "../server/getPosts";
+import { getPosts, Post } from "../server/posts";
 import { useEffect, useState } from "react";
 import { Box, Card, CircularProgress, Grid, Paper, Typography } from "@mui/material";
 import CommentCard from "../components/CommentCard";
