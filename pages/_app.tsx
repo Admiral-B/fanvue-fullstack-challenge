@@ -7,6 +7,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider theme={lightTheme}>
       <CssBaseline />
+      {/* Added the favicon in the head tag */}
       <Head>
         <link rel="icon" href="/favicon.ico" />
       </Head>

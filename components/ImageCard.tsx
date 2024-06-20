@@ -47,6 +47,7 @@ const ImageCard = ({ photo, open, handleClose, handleOpen }: ImageProps) => {
           )}
         </Box>
       </Card>
+      {/* using a modal to display the image full screen (95%) */}
       <Modal
         open={open}
         onClose={handleClose}
@@ -69,11 +70,24 @@ const ImageCard = ({ photo, open, handleClose, handleOpen }: ImageProps) => {
             justifyContent: "center",
           }}
         >
-          <img
-            src={photo.url}
-            alt={photo.title}
-            loading="lazy"
-          />
+          {/* if the url is null, the image is still loading */}
+          {!photo.url ? (
+            <CircularProgress
+              sx={{
+                position: "absolute",
+                top: "50%",
+                left: "50%",
+                transform: "translate(-50%, -50%)",
+              }}
+            />
+          ) : (
+            <Image
+              src={photo.url}
+              alt={photo.title}
+              layout="fill"
+              objectFit="cover"
+            />
+          )}
         </Box>
       </Modal>
     </>

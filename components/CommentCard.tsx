@@ -7,9 +7,11 @@ type Props = {
 }
 
 function CommentCard({ post }: Props) {
+  // using state to show/hide comments
   const [comments, setComments] = useState<Comment[]>([])
   const [showComments, setShowComments] = useState<boolean>(false)
 
+  // upon component load the comments are fetched
   useEffect(() => {
     getComments({ post_id: post.id }).then((comments) => {
       setComments(comments)
@@ -21,6 +23,7 @@ function CommentCard({ post }: Props) {
       <Paper sx={{ p: 2, textAlign: "center" }}>
         <Typography variant="h6">{post.title}</Typography>
         <Typography variant="body1">{post.body}</Typography>
+        {/* This button sets the show/hide state */}
         <Button
           variant="contained"
           color="primary"
@@ -29,6 +32,7 @@ function CommentCard({ post }: Props) {
         >
           {showComments ? "Hide comments" : `Show ${comments.length} comments`}
         </Button>
+        {/* Using a collapsible list to show comments */}
         {comments.length > 0 && showComments ? (
           <Collapse in={comments.length > 0} timeout="auto" unmountOnExit>
             <List sx={{ mt: 2 }}>

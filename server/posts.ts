@@ -1,3 +1,4 @@
+// Created types for the posts API, specifically the post and comment types
 export type Post = {
   userId: number,
   id: number,
@@ -13,6 +14,7 @@ export type Comment = {
   body: string
 }
 
+// Created 2 server actions to fetch posts and comments
 async function getPosts() {
   try {
     const res = await fetch("https://jsonplaceholder.typicode.com/posts");

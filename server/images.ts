@@ -1,3 +1,4 @@
+// Created types for the image API
 export type Photo = {
   albumId: number,
   id: number,
@@ -11,6 +12,7 @@ export type GetPhotoProps = {
   limit?: number
 }
 
+// Fetches photos from the image API via a server action
 async function getPhotos({ albumId, limit }: GetPhotoProps) {
   const queryParams = new URLSearchParams();
   if (albumId !== undefined) {
