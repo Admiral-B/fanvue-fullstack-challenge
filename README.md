@@ -8,24 +8,24 @@ There is a simple homepage with links to the tasks below.
 
 First Task:
 
-- in the "feed" page, show a centered column of posts (use https://jsonplaceholder.typicode.com/ to get the data) which are simple boxes with the title and body properties returned
-- for each post, fetch its relative comments and show the counter, or nothing if there are no comments
-- when clicking on the comment counter, the comments appear below it
+[x] in the "feed" page, show a centered column of posts (use https://jsonplaceholder.typicode.com/ to get the data) which are simple boxes with the title and body properties returned
+[x] for each post, fetch its relative comments and show the counter, or nothing if there are no comments
+[x] when clicking on the comment counter, the comments appear below it
 
 Second Task:
 
-- create a "vault" page, showing a responsive grid of square pictures (use https://jsonplaceholder.typicode.com/ to get the data) which are simple thumbnails
-- when clicking on a thumbnail, the fullscreen image opens
+[x] create a "vault" page, showing a responsive grid of square pictures (use https://jsonplaceholder.typicode.com/ to get the data) which are simple thumbnails
+[x] when clicking on a thumbnail, the fullscreen image opens
 
 Touch base on the following:
 
-- SSR considerations, if you have time, implement a simple server-side rendering
-- Type the responses from the API calls
-- create meaningful tags in the head of each page, or any other SEO consideration
-- add the favicon stealing it from fanvue.com ;)
-- a11y considerations
+[ ] SSR considerations, if you have time, implement a simple server-side rendering
+[x] Type the responses from the API calls
+[ ] create meaningful tags in the head of each page, or any other SEO consideration
+[x] add the favicon stealing it from fanvue.com ;)
+[x] a11y considerations
 
 Note:
 
-- Styling is not required, you should use MUI5 components out-of-the box, check docs here https://mui.com/material-ui/
-- You can install your favourite fetch library, but you can also use the built-in fetch API
+[x] Styling is not required, you should use MUI5 components out-of-the box, check docs here https://mui.com/material-ui/
+[x] You can install your favourite fetch library, but you can also use the built-in fetch API
