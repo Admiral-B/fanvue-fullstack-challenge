@@ -17,7 +17,7 @@ function CommentCard({ post }: Props) {
   }, [])
 
   return (
-    <Card key={post.id}>
+    <Card key={post.id} sx={{ my: 4 }}>
       <Paper sx={{ p: 2, textAlign: "center" }}>
         <Typography variant="h6">{post.title}</Typography>
         <Typography variant="body1">{post.body}</Typography>

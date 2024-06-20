@@ -15,7 +15,7 @@ const Feed: NextPage = () => {
 
   return (
     <Box sx={{ display: "flex", justifyContent: "center", width: "50%", mx: "auto", my: 5 }}>
-      <Box spacing={2} alignItems="center" maxWidth={"100%"}>
+      <Box component={'div'} alignItems="center" maxWidth={"100%"}>
         {posts && posts.length > 0 ? (
           posts.map((post) => (<CommentCard key={post.id} post={post} />))
         ) : (
